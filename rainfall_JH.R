@@ -1,0 +1,17 @@
+mean(rainfall_in_jharkhand$`Rainfall(Cm)`)
+median(rainfall_in_jharkhand$`Rainfall(Cm)`)
+var(rainfall_in_jharkhand$`Rainfall(Cm)`)
+sd(rainfall_in_jharkhand$`Rainfall(Cm)`)
+range(rainfall_in_jharkhand$`Rainfall(Cm)`)
+diff(range(rainfall_in_jharkhand$`Rainfall(Cm)`))
+IQR(rainfall_in_jharkhand$`Rainfall(Cm)`)
+summary(rainfall_in_jharkhand$`Rainfall(Cm)`)
+boxplot(rainfall_in_jharkhand$`Rainfall(Cm)`)
+
+
+mean(classdata$noofStudents)
+summary(classdata$noofStudents)
+IQR(classdata$noofStudents)
+boxplot(classdata$noofStudents)
+var(classdata$noofStudents)
+sd(classdata$noofStudents)
