@@ -35,3 +35,47 @@ PropFreqTab.Sepal_length = prop.table(FreqTab.Sepal_length) #Relative frequency 
 #Histogram created by the software based on the given classes
 hist(iris$Sepal.Length, breaks=break.Sepal_length, right=FALSE, probability = TRUE, xlab="Sepal Length", main="Histogram of Sepal Length", col = "lightblue")
 
+#
+#
+
+
+#to know the names/levels of the variable "species" of iris
+
+levels(iris$Species)
+
+#groupwise average
+mean(iris$Sepal.Length[iris$Species=="setosa"])
+mean(iris$Sepal.Width[iris$Species=="setosa"])
+
+mean(iris$Sepal.Length[iris$Species=="versicolor"])
+mean(iris$Sepal.Width[iris$Species=="versicolor"])
+
+mean(iris$Sepal.Length[iris$Species=="virginica"])
+mean(iris$Sepal.Width[iris$Species=="virginica"])
+
+mean(iris$Petal.Length[iris$Species=="setosa"])
+mean(iris$Petal.Width[iris$Species=="setosa"])
+
+mean(iris$Petal.Length[iris$Species=="versicolor"])
+mean(iris$Petal.Width[iris$Species=="versicolor"])
+
+mean(iris$Petal.Length[iris$Species=="versicolor"])
+mean(iris$Petal.Width[iris$Species=="versicolor"])
+
+median(iris$Sepal.Length[iris$Species=="setosa"])
+median(iris$Sepal.Width[iris$Species=="setosa"])
+
+
+
+#boxplot of Sepal.Length for different species
+boxplot(iris$Sepal.Length[iris$Species=="setosa"], iris$Sepal.Length[iris$Species=="versicolor"], iris$Sepal.Length[iris$Species=="virginica"], names = c("Setosa", "Versicolor", "Virginica"), col = c("orange","indianred2", "green"), main = "Boxplot of Sepal.Length of different species")
+boxplot(iris$Sepal.Width[iris$Species=="setosa"], iris$Sepal.Width[iris$Species=="versicolor"], iris$Sepal.Width[iris$Species=="virginica"], names = c("Setosa", "Versicolor", "Virginica"), col = c("orange","indianred2", "green"), main = "Boxplot of Sepal.width of different species")
+
+boxplot(iris$Petal.Length[iris$Species=="setosa"], iris$Petal.Length[iris$Species=="versicolor"], iris$Petal.Length[iris$Species=="virginica"], names = c("Setosa", "Versicolor", "Virginica"), col = c("orange","indianred2", "green"), main = "Boxplot of Petal.Length of different species")
+boxplot(iris$Petal.Width[iris$Species=="setosa"], iris$Petal.Width[iris$Species=="versicolor"], iris$Petal.Width[iris$Species=="virginica"], names = c("Setosa", "Versicolor", "Virginica"), col = c("orange","indianred2", "green"), main = "Boxplot of Petal.Width of different species")
+
+#For outlier identification
+boxplot(iris$Petal.Width[iris$Species == "setosa"])$out
+
+#Histograms:
+hist(iris$Sepal.Length, breaks=12, xlim=c(4,8) ,main="Histogram of Sepal Length", xlab="Sepal Length", col="plum1", freq=FALSE)
